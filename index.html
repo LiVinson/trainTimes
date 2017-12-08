@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Train Arrivals</title>
+
+    <!-- Bootstrap: -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7"
+        crossorigin="anonymous">
+
+    <!-- CSS: -->
+    <link rel="stylesheet" href="assets/css/style.css">
+
+</head>
+
+<body>
+    <div class="container">
+        
+        <!-- Jumbotron: -->
+        <div class="jumbotron jumbotron-fluid">
+            <h1 class="display-3">On the Rails</h1>
+            <p class="lead">Something, something, choo-choo</p>
+        </div>
+
+        <!-- Row 1 : Top Panel - Train Arrival Times -->
+
+        <div class="row">
+            <div class="col-sm-12">
+
+                <div class="panel panel-primary">
+                    <!-- Default panel contents -->
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Train Schedule</h3>
+                    </div>
+
+                    <div class="panel-body tablePanel">
+                        <!-- Table -->
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <!--  Header Row-->
+                                    <th>Train Name</th>
+                                    <th>Destination</th>
+                                    <th>Frequency</th>
+                                    <th>Next Arrival</th>
+                                    <th>Minutes Away</th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                <tr>
+                                    <td>Sunshine Express</td>
+                                    <td>Miami, FL</td>
+                                    <td>1 hour</td>
+                                    <td>4:35pm</td>
+                                    <td>59 minutes</td>
+                                </tr>
+                            </tbody>
+
+                        </table>
+                    </div>
+                </div>
+
+            </div>
+            <!--End Column-->
+        </div>
+        <!--End Row 1-->
+
+        <!-- Row 2 : Bottom Panel - Adding Trains -->
+
+        <div class="row">
+            <div class="col-sm-12">
+
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Add Train</h3>
+                    </div>
+                    <div class="panel-body">
+                        <!-- Form -->
+
+                        <form id="trainForm">
+
+                            <!-- Form Input1: Train Name  -->
+                            <div class="form-group">
+                                <label for="name">Train Name</label>
+                                <input type="text" class="form-control" id="name">
+                            </div>
+
+                            <!-- Form Input2: Destination  -->
+                            <div class="form-group">
+                                <label for="destination">Destination (City, ST)</label>
+                                <input type="text" class="form-control" id="destination">
+                            </div>
+
+
+                            <!-- Form Input3: First Train Time  -->
+                            <div class="form-group">
+                                <label for="firstTrain">First Train Time (24 hour clock -HH:mm)</label>
+                                <input type="text" class="form-control" id="firstTrain">
+                            </div>
+
+
+                            <!-- Form Input4: Frequency -->
+                            <div class="form-group">
+                                <label for="frequency">Frequency</label>
+                                <input type="text" class="form-control" id="frequency">
+                            </div>
+
+                            <!--Submit Button-->
+                            <button type="button" class="btn btn-primary" id="submitBtn">Submit</button>
+                        </form>
+
+                    </div>
+                </div>
+
+            </div>
+            <!--End Column-->
+        </div>
+        <!--End Row 2-->
+
+    </div>
+    <!--End Container-->
+
+    <!--Firebase: -->
+    <script src="https://www.gstatic.com/firebasejs/4.8.0/firebase.js"></script>
+
+    <!--MomentJS-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.19.3/moment.min.js"></script>
+
+
+    <!-- jQuery?: -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
+    <!--JavaScript-->
+    <script src="assets/javascript/logic.js"></script>
+
+
+
+
+
+</body>
+
+</html>

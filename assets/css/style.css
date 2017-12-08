@@ -1,0 +1,15 @@
+
+body {
+    background-image: url(../images/trainBackground.jpg)
+}
+
+.jumbotron{
+    background: rgba(128, 128, 128, 0.0); /* Makes panel transparent w/o changing child elements*/
+    text-align:center;
+}
+
+.panel{
+    background: rgba(inherit, inherit, inherit, 0.9); 
+}
+
+
