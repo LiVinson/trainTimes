@@ -86,9 +86,9 @@ database.ref().on("child_added",function(childSnapshot, prevChildKey) {
 
     //Time of next: Current Time + Minutes Til
 
-   var nextTrain = moment().add(minutesTil, "minutes");
-   nextTrain = moment(nextTrain).format("h:mm A");
-   console.log("Next train is coming at : " + nextTrain)
+    var nextTrain = moment().add(minutesTil, "minutes");
+    nextTrain = moment(nextTrain).format("h:mm A");
+    console.log("Next train is coming at : " + nextTrain)
 
 // Display the train data into the table
 
@@ -99,12 +99,11 @@ database.ref().on("child_added",function(childSnapshot, prevChildKey) {
 });
 
 
-
-
-
-
-
-
+//Next Steps:
+// Improve styling: background, font, colors
+// Update trains currently in the database
+// Figure out to update minutes to arrival and next train time every minute - Idea: 
+    //Save those steps as a function and call that function every minute w/ setInterval, empty table and reload entire thing. forEach?
 
 
 //BONUS:
