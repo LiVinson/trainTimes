@@ -20,7 +20,7 @@ $("#submitBtn").on("click", function(event) {
 
     console.log("Submit clicked - add a new train")
 
-    //Grab user input and save into a variables(use moment to save the train start time)
+    //Grab user input and save into a variables
 
     var trainName = $("#name").val().trim();
     console.log(trainName)
@@ -28,7 +28,7 @@ $("#submitBtn").on("click", function(event) {
     var trainDest = $("#destination").val().trim();
     console.log(trainDest)
 
-    var firstTrain = moment($("#firstTrain").val().trim(), "HH:mm").format("X"); //This should be converted to military time using moment
+    var firstTrain = moment($("#firstTrain").val().trim(), "HH:mm").format("X"); //Time of first train, in unix (# of seconds since 1/1/1970)
     console.log(firstTrain)
 
     var trainFreq = parseInt($("#frequency").val().trim())
@@ -74,22 +74,27 @@ database.ref().on("child_added",function(childSnapshot, prevChildKey) {
     
     // Make the start time the correct format using JS
 
-    var minSinceStart = moment().diff(moment.unix(firstTrainDisp, "X"),); //minutes since the first train
-    console.log("Since the first train: " + minSinceStart);
+    //Amount of time since the first train in minutes
 
-    console.log("Minutes since the first train: " + moment.unix(minSinceStart).format("minutes"));
+    var timeSince = moment().diff(moment.unix(firstTrainDisp, "X"), "minutes");
+    console.log("Time since the first train (minutes): " + timeSince);
     
-    var minutesTill = trainFreqDisp - (minSinceStart % trainFreqDisp); 
-    console.log("minutes til the next train: " +minutesTill);
+    // Minutes til next Train: Frequency - remainder of( Timesince/ Frequency) = 
 
+    var minutesTil = parseInt((trainFreqDisp - (timeSince%trainFreqDisp)));
+    console.log("Minutes until next train: " + minutesTil);
 
+    //Time of next: Current Time + Minutes Til
 
-    // var nextTrain = ""//curent time in minutes + minutesTill;
+   var nextTrain = moment().add(minutesTil, "minutes");
+   nextTrain = moment(nextTrain).format("h:mm A");
+   console.log("Next train is coming at : " + nextTrain)
 
-    // //Display the train data into the table
+// Display the train data into the table
 
-    // $("#trainTable > tbody").append(`<tr><td>${trainNameDisp}</td><td>${trainDestDisp}</td><td>${trainFreqDisp}</td>
-    // <td>${nextTrain}</td><td>${minutesTill}</td><tr>`)
+   
+    $("#trainTable > tbody").append(`<tr><td>${trainNameDisp}</td><td>${trainDestDisp}</td><td>${trainFreqDisp} minutes</td>
+    <td>${nextTrain}</td><td>${minutesTil} minutes</td><tr>`)
 
 });
 
