@@ -1,15 +1,62 @@
 
 body {
-    background-image: url(../images/trainBackground.jpg)
-}
+    background-image: url(../images/beachBackground.jpg);
+    font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    color: #0086b3;
+    }
 
 .jumbotron{
     background: rgba(128, 128, 128, 0.0); /* Makes panel transparent w/o changing child elements*/
     text-align:center;
+    color:white;
+    padding-bottom:5px;
+    margin-bottom:5px;
+    
 }
+
+/* Sunshine Station  */
+.display-3{
+    font-family: 'Marck Script', cursive;
+    font-size:150px!important;
+    -webkit-text-fill-color: #ffcc5c; /* Will override color (regardless of order) */
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: white;
+    margin-bottom:0px;
+    margin-top:0px;
+}
+
+/* Get to the Beach in No Time */
+.lead {
+    font-family: 'Covered By Your Grace', cursive;
+    font-size: 50px!important;
+    color: #ff6f69;
+    text-align:right;
+    padding-right:20px;
+ }
 
 .panel{
-    background: rgba(inherit, inherit, inherit, 0.9); 
+    background-color: rgba(255,	242, 223, .8);
+    border:solid 1px white;
 }
 
+
+.panel-heading{
+    background-color:rgba(255, 204, 92, .7)!important;
+    border:solid 1px white!important;
+}
+
+.panel-title{
+    margin:auto;
+    width:fit-content;
+    font-family: 'Covered By Your Grace', cursive;
+    font-size:28px;
+    color:#0086b3;
+}
+
+#submitBtn{
+    background-color:#ff6f69;
+    font-family:'Covered By Your Grace', cursive;
+    font-size:18px;
+    border:solid 1px white;
+}
 

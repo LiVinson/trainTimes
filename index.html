@@ -12,59 +12,25 @@
     <!-- CSS: -->
     <link rel="stylesheet" href="assets/css/style.css">
 
+    <!-- Google Fonts: -->
+    <link href="https://fonts.googleapis.com/css?family=Covered+By+Your+Grace|Marck+Script" rel="stylesheet">
+
 </head>
 
 <body>
     <div class="container">
-        
+
         <!-- Jumbotron: -->
         <div class="jumbotron jumbotron-fluid">
-            <h1 class="display-3">On the Rails</h1>
-            <p class="lead">Something, something, choo-choo</p>
+            <h1 class="display-3">Sunshine Station</h1>
+            <p class="lead">Get to the Beach in No Time</p>
         </div>
 
-        <!-- Row 1 : Top Panel - Train Arrival Times -->
-
+        <!-- Row 1 :  -->
         <div class="row">
-            <div class="col-sm-12">
 
-                <div class="panel panel-primary">
-                    <!-- Default panel contents -->
-                    <div class="panel-heading">
-                        <h3 class="panel-title">Train Schedule</h3>
-                    </div>
-
-                    <div class="panel-body tablePanel">
-                        <!-- Table -->
-                        <table class="table" id="trainTable">
-                            <thead>
-                                <tr>
-                                    <!--  Header Row-->
-                                    <th>Train Name</th>
-                                    <th>Destination</th>
-                                    <th>Frequency</th>
-                                    <th>Next Arrival</th>
-                                    <th>Minutes Away</th>
-                                </tr>
-                            </thead>
-
-                            <tbody>
-                                <!-- Train data displays dynamically here -->
-                            </tbody>
-
-                        </table>
-                    </div>
-                </div>
-
-            </div>
-            <!--End Column-->
-        </div>
-        <!--End Row 1-->
-
-        <!-- Row 2 : Bottom Panel - Adding Trains -->
-
-        <div class="row">
-            <div class="col-sm-12">
+            <!-- Col 1 : Left Panel - Adding Trains -->
+            <div class="col-sm-12 col-md-5">
 
                 <div class="panel panel-primary">
                     <div class="panel-heading">
@@ -110,8 +76,43 @@
 
             </div>
             <!--End Column-->
+
+            <!-- Col 2 : Right Panel - Train Schedule -->
+            <div class="col-sm-12 col-md-7">
+
+                <div class="panel panel-primary">
+                    <!-- Default panel contents -->
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Train Schedule</h3>
+                    </div>
+
+                    <div class="panel-body tablePanel">
+                        <!-- Table -->
+                        <table class="table" id="trainTable">
+                            <thead>
+                                <tr>
+                                    <!--  Header Row-->
+                                    <th>Train Name</th>
+                                    <th>Destination</th>
+                                    <th>Frequency</th>
+                                    <th>Next Arrival</th>
+                                    <th>Minutes Away</th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                <!-- Train data displays dynamically here -->
+                            </tbody>
+
+                        </table>
+                    </div>
+                </div>
+
+            </div>
+            <!--End Column-->
+
         </div>
-        <!--End Row 2-->
+        <!--End Row-->
 
     </div>
     <!--End Container-->
