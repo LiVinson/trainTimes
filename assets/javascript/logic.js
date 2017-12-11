@@ -91,6 +91,7 @@ database.ref().on("child_added",function(childSnapshot, prevChildKey) {
     console.log("Next train is coming at : " + nextTrain)
 
 // Display the train data into the table
+    
 
    
     $("#trainTable > tbody").append(`<tr><td>${trainNameDisp}</td><td>${trainDestDisp}</td><td>${trainFreqDisp} minutes</td>

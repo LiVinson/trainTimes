@@ -29,9 +29,14 @@ body {
 .lead {
     font-family: 'Covered By Your Grace', cursive;
     font-size: 50px!important;
-    color: #ff6f69;
     text-align:right;
     padding-right:20px;
+    /* color: white; */
+
+    -webkit-text-fill-color: white; /* Will override color (regardless of order) */
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #ff6f69;
+    
  }
 
 .panel{
